@@ -37,3 +37,25 @@ test('return the sorted list from larger to smaller with negative number', () =>
 
   expect(result).toEqual([{ name: 'лучник', health: 80 }, { name: 'маг', health: 30 }, { name: 'мечник', health: 0 }]);
 });
+
+test('checking methods for returning values', () => {
+  expect(returnSortHealth([
+    { name: 'мечник', health: 0 },
+    { name: 'маг', health: 30 },
+    { name: 'лучник', health: 80 },
+  ])).not.toBe([
+    { name: 'лучник', health: 80 },
+    { name: 'маг', health: 30 },
+    { name: 'мечник', health: 0 },
+  ]);
+
+  expect(returnSortHealth([
+    { name: 'мечник', health: 0 },
+    { name: 'маг', health: 30 },
+    { name: 'лучник', health: 80 },
+  ])).toEqual([
+    { name: 'лучник', health: 80 },
+    { name: 'маг', health: 30 },
+    { name: 'мечник', health: 0 },
+  ]);
+});
