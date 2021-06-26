@@ -1,0 +1,20 @@
+body {
+  color: #999;
+}
+
+.health {
+  width: 100px;
+  height: 15px;
+  margin-bottom: 20px;
+}
+
+.healthy {
+  background-color: green;
+}
+.wounded {
+  background-color: yellow;
+}
+
+.critical {
+  background-color: red;
+}
